@@ -1,0 +1,56 @@
+[
+  {
+    "mitarbeiterId": 1,
+    "beginn": "2023-03-01T09:00:00",
+    "ende": "2023-03-01T09:45:00",
+    "dauer": 45
+  },
+  {
+    "mitarbeiterId": 2,
+    "beginn": "2023-03-01T13:30:00",
+    "ende": "2023-03-01T14:15:00",
+    "dauer": 45
+  },
+  {
+    "mitarbeiterId": 3,
+    "beginn": "2023-03-01T08:15:00",
+    "ende": "2023-03-01T09:30:00",
+    "dauer": 75
+  },
+  {
+    "mitarbeiterId": 1,
+    "beginn": "2023-03-02T10:00:00",
+    "ende": "2023-03-02T10:30:00",
+    "dauer": 30
+  },
+  {
+    "mitarbeiterId": 2,
+    "beginn": "2023-03-02T14:00:00",
+    "ende": "2023-03-02T15:30:00",
+    "dauer": 90
+  },
+  {
+    "mitarbeiterId": 3,
+    "beginn": "2023-03-02T08:30:00",
+    "ende": "2023-03-02T10:00:00",
+    "dauer": 90
+  },
+  {
+    "mitarbeiterId": 1,
+    "beginn": "2023-03-03T09:00:00",
+    "ende": "2023-03-03T10:00:00",
+    "dauer": 60
+  },
+  {
+    "mitarbeiterId": 2,
+    "beginn": "2023-03-03T13:30:00",
+    "ende": "2023-03-03T14:30:00",
+    "dauer": 60
+  },
+  {
+    "mitarbeiterId": 3,
+    "beginn": "2023-03-03T08:00:00",
+    "ende": "2023-03-03T09:45:00",
+    "dauer": 105
+  }
+]

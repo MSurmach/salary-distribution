@@ -1,0 +1,14 @@
+server:
+  port: 8090
+spring:
+  main:
+    banner-mode: off
+  application:
+    name: Salary distribution application in proportion to work time
+
+some-service:
+  baseUrl: http://some-service/period/{period}
+
+
+
+

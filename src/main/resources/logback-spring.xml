@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <property name="LOG_PATTERN"
+              value=" %d{dd-MM-yyyy HH:mm:ss} %-5level [%thread] %logger{36}.%M - %msg%n"/>
+    <property name="LOGS" value="./logs"/>
+
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>${LOG_PATTERN}</Pattern>
+        </layout>
+    </appender>
+    <appender name="applicationLog" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>${LOG_PATTERN}</Pattern>
+        </layout>
+        <file>${LOGS}/salary_distribution_app.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>
+                ${LOGS}/archived/salary_distribution_app-%d{yyyy-MM-dd}.log
+            </fileNamePattern>
+            <maxHistory>7</maxHistory>
+        </rollingPolicy>
+    </appender>
+    <appender name="springLog" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>${LOG_PATTERN}</Pattern>
+        </layout>
+        <file>${LOGS}/spring_framework.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>
+                ${LOGS}/archived/springLog-%d{yyyy-MM-dd}.log
+            </fileNamePattern>
+            <maxHistory>7</maxHistory>
+        </rollingPolicy>
+    </appender>
+    <logger name="com.intexsoft.salary_distribution" level="info">
+        <appender-ref ref="applicationLog"/>
+        <appender-ref ref="console"/>
+    </logger>
+    <logger name="org.springframework" level="info">
+        <appender-ref ref="springLog"/>
+        <appender-ref ref="console"/>
+    </logger>
+    <root level="info">
+        <appender-ref ref="console"/>
+    </root>
+</configuration>

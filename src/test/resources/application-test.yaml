@@ -1,0 +1,5 @@
+wiremock:
+  server:
+    port: 8000
+some-service:
+  baseUrl: http://localhost:${wiremock.server.port}/period/{period}

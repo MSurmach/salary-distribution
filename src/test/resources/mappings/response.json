@@ -1,0 +1,13 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "/period/2023-03"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "bodyFileName": "2023-03.json"
+  }
+}
