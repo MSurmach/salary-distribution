@@ -1,10 +1,9 @@
 package com.intexsoft.salary_distribution.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.*;
-
-import java.math.BigDecimal;
-import java.math.RoundingMode;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
 
 @Data
 @Builder
@@ -12,11 +11,5 @@ import java.math.RoundingMode;
 public class EmployeeSalaryDto {
     @JsonProperty("mitarbeiterId")
     private Long employeeId;
-    @Setter(AccessLevel.NONE)
     private Double salary;
-
-    public void setSalary(Double salary) {
-        this.salary = BigDecimal.valueOf(salary)
-                .setScale(2, RoundingMode.UP).doubleValue();
-    }
 }

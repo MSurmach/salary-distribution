@@ -8,6 +8,8 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
@@ -59,7 +61,9 @@ public class SalaryDistributionServiceImpl implements SalaryDistributionService 
         var employeePerformance = (double) employeeTotalWorkDuration / periodTotalWorkDuration;
         var result = employeePerformance * totalAmount;
         log.debug("OUT: the calculated result = {}", result);
-        return result;
+        return BigDecimal.valueOf(result)
+                .setScale(2, RoundingMode.UP)
+                .doubleValue();
     }
 
     private int calculateTotalWorkDurationAllEmployees(final List<EmployeeTimeTrackingDto> employeeTimeTrackingDtos) {
